@@ -63,13 +63,14 @@ class Contato {
     }
 
     atualizar(id, contato) {
-        alert('Contato editado');
+        
         for( let i = 0; i < this.listaContatos.length; i++){
             if(this.listaContatos[i].id == id) {
                 this.listaContatos[i].nomeContato = contato.nomeContato;
                 this.listaContatos[i].sobrenomeContato = contato.sobrenomeContato;
                 this.listaContatos[i].numeroContato = contato.numeroContato;
                 this.listaContatos[i].emailContato = contato.emailContato;
+                alert('Contato editado');
             }
         }
     }
@@ -83,7 +84,6 @@ class Contato {
         document.getElementById('email').value = dados.emailContato;
 
         document.getElementById('atualiza').innerText = 'Atualizar';
-        alert(dados.id);
     }
 
     lerInfos() {
