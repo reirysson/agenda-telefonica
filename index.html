@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="/assets/js/contato.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sua agenda</h1>
+    </header>
+
+    <main>
+        <div class="titulo">
+            <h2>Contatos</h2>
+            <span>Lista de contatos</span>
+        </div>
+
+        <div class="contato">
+                <div class="entradas">
+                    <label>Nome</label>
+                    <input type="text" id="nome" placeholder="Nome do contato" required>
+                </div>
+    
+                <div class="entradas">
+                    <label>Sobrenome</label>
+                    <input type="text" id="sobrenome" placeholder="Sobrenome do contato">
+                </div>
+    
+                <div class="entradas">
+                    <label>Celular</label>
+                    <input type="tel" id="numero" placeholder="XX-XXXX-XXXX" required>
+                </div>
+    
+                <div class="entradas">
+                    <label>E-mail</label>
+                    <input type="text" id="email" placeholder="contato@email.com">
+                </div>
+            
+            <button onclick="contato.salvar()" id="atualiza">Salvar</button>
+            <button onclick="contato.cancelar()">Cancelar</button>
+        </div>
+
+        <div class="conteudo">
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Celular</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    
+</body>
+</html>
