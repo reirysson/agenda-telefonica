@@ -52,10 +52,9 @@ class Contato {
 
             td_acoes.appendChild(imgEditar);
             td_acoes.appendChild(imgExcluir);
-
-            console.log(this.listaContatos);
         }
     }
+        
 
     adicionar(contato) {
         this.listaContatos.push(contato);
@@ -72,6 +71,16 @@ class Contato {
                 this.listaContatos[i].emailContato = contato.emailContato;
                 alert('Contato editado');
             }
+        }
+    }
+
+    buscar() {
+        let buscando = document.getElementById('txtBuscar').value;
+        let achado = this.listaContatos.find(contato => buscando==contato.nomeContato || buscando==contato.numeroContato);
+        if(achado){
+            this.editando(achado);
+        } else {
+            alert('Este contato não existe');
         }
     }
 

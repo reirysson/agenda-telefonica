@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
 
-    <script src="/assets/js/contato.js"></script>
+    <script src="/assets/js/contato.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,11 +20,13 @@
     </header>
 
     <main>
-        <div class="titulo">
-            <h2>Contatos</h2>
-            <span>Lista de contatos</span>
+        <div id="buscar">
+            <input type="text" name="name" id="txtBuscar" placeholder="Buscar contato">
+            <button onclick="contato.buscar()" id="buscar">
+                <img src="assets/img/icone-buscar.svg" id="btnBuscar" alt="Buscar"></img>
+            </button>
         </div>
-
+        
         <div class="contato">
                 <div class="entradas">
                     <label>Nome</label>
@@ -45,17 +47,13 @@
                     <label>E-mail</label>
                     <input type="text" id="email" placeholder="contato@email.com">
                 </div>
-
-                <div id="buscar">
-                    <input type="text" id="txtBuscar" placeholder="Buscar contato">
-                    <img src="assets/img/icone-buscar.svg" id="btnBuscar" alt="Buscar">
-                </div>
             
             <button onclick="contato.salvar()" id="atualiza">Salvar</button>
             <button onclick="contato.cancelar()">Cancelar</button>
         </div>
 
         <div class="conteudo">
+            <span>Lista de contatos</span>
             <table border="1">
                 <thead>
                     <th>ID</th>
